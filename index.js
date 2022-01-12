@@ -39,7 +39,7 @@ app.get("/pagar", async (req, res) => {
     }
     try{
         var pagamento = await MercadoPago.preferences.create(dados);
-        console.log(pagamento);
+        //Banco.SalvarPagamento({id: id, pagador: emailDoPagador});
         return res.redirect(pagamento.body.init_point);
 
     }catch(err){
