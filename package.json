@@ -1,0 +1,23 @@
+{
+  "name": "mercadopago",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinicius-batista-dev/mercadopago.git"
+  },
+  "author": "vinicius-batista",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinicius-batista-dev/mercadopago/issues"
+  },
+  "homepage": "https://github.com/vinicius-batista-dev/mercadopago#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "mercadopago": "^1.5.11"
+  }
+}
