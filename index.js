@@ -1,5 +1,6 @@
 const express = require('express');
 const MercadoPago = require('mercadopago');
+const { isBooleanObject } = require('util/types');
 const app = express();
 
 const PORT = 3000;
@@ -16,8 +17,6 @@ app.get("/", (req, res) => {
 
 
 app.get("/pagar", async (req, res) => {
-
-    
 
     var id = "" + Date.now();
     var emailDoPagador = "viniciusbbf3@hotmail.com";
@@ -63,6 +62,8 @@ app.post("/not", (req, res) => {
 
             if(pagamento != undefined){
                 console.log(pagamento);
+                console.log(pagamento.external_reference);
+                console.log(pagamento.status);//pagamento concluido com sucesso
             }else{
                 console.log("Pagamento nao existe, por favor verificar conta");
             }
