@@ -6,6 +6,7 @@ const PORT = 3000;
 
 MercadoPago.configure({
     sandbox: true,
+    //sua token com mercado pago
     access_token: 'TOKEN'
 })
 
@@ -33,7 +34,7 @@ app.get("/pagar", async (req, res) => {
         ],
         //Na hora que o pagamento vai ser gerado no banco
         payer: {
-            email: "viniciusbbf3@hotmail.com"
+            email: emailDoPagador
         },
         external_reference: id
     }
@@ -47,6 +48,11 @@ app.get("/pagar", async (req, res) => {
     }
   
 });
+
+app.post("/not", (req, res) => {
+    console.log(req.query);
+    res.send("OK");
+})
 
 app.listen(PORT, (req, res) => {
     console.log("Servidor rodando")
